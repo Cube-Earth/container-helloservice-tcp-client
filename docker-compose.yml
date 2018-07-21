@@ -1,0 +1,11 @@
+version: '3'
+services:
+  main:
+    image: cubeearth/helloservice-tcp-client
+    command: "server"
+    depends_on:
+      - server
+
+  server:
+    container_name: server
+    image: cubeearth/helloservice-tcp-server
